@@ -1,0 +1,37 @@
+.header {
+    padding-top:25px;
+    background-color:$darkBlue;
+
+    @include breakpoint-up(medium) {
+        padding-top:70px;
+    }
+
+    &__logo {
+        width:80px;
+
+        @include breakpoint-up(medium) {
+            width:175px;
+        }
+    }
+
+    &__nav {
+        font-family: 'Raleway', sans-serif;  
+    
+        a {
+            color:#ffffff;
+            font-size:12px;
+
+            &:not(:last-child) {
+                margin-right:1.625em;
+            }
+
+            @include breakpoint-up(medium) {
+                font-size:0.9375rem;
+
+                &:not(:last-child) {
+                    margin-right:3.625em;
+                }
+            } 
+        }
+    }
+}

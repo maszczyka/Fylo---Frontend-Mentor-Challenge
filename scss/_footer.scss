@@ -1,0 +1,109 @@
+.footer {
+    background-color:$evenDarker;
+    padding-bottom:20px;
+    text-align:left;
+
+    @include breakpoint-up(medium) {
+        display:grid;
+        grid-template-columns: 2fr repeat(4, 1fr);
+        grid-template-rows: 1fr 2fr;
+        grid-template-areas: 
+        "logo logo logo logo logo"
+        "location contact links1 links2 socials";
+        grid-column-gap:50px;
+    }
+
+    &__logo {
+        margin-bottom:40px;
+
+
+        @include breakpoint-up(medium) {
+            grid-area:logo;
+        }
+    }
+
+    &__location {
+        display:flex;
+        flex-direction: row;
+        margin-bottom:30px;
+        line-height: 1.6;
+        align-items: flex-start;
+
+        @include breakpoint-up(medium) {
+            grid-area:location;
+        }
+
+        p {
+            margin:0;
+            font-size:15px;
+        }
+    }
+
+    &__contact {
+        margin-bottom:60px;
+
+        @include breakpoint-up(medium) {
+            grid-area:contact;
+        }
+    }
+
+    &__links {
+        display:flex;
+        flex-direction: column;
+        line-height:2.5;
+        
+        &.col1 {
+            margin-bottom:40px;
+
+            @include breakpoint-up(medium) {
+                grid-area:links1;
+            }
+        }
+
+        &.col2 {
+            margin-bottom:60px;
+
+            @include breakpoint-up(medium) {
+                grid-area:links2;
+            }
+        }
+    }
+
+    &__social {
+        text-align:center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        @include breakpoint-up(medium) {
+            grid-area:socials;
+        }
+
+        a {
+            border: 1px white solid;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            font-size: 13px;
+            padding: 5px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        a:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+
+    &__icon {
+        margin-right:20px;
+        margin-top: 7px;
+    }
+
+    &__icon:not(:last-child) {
+        margin-bottom:20px;
+    }
+}

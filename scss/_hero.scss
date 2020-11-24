@@ -1,0 +1,71 @@
+.hero {
+    background-image: url(../images/bg-curvy-mobile.svg);
+        background-color:$darkBlue;
+        background-repeat:no-repeat;
+        background-position: center bottom -1px;
+        background-size:100%;   
+        margin-bottom:8rem;
+    
+            @include breakpoint-up(large) {
+                background-image: url(../images/bg-curvy-desktop.svg);
+                background-position: center bottom -1px;
+                padding-bottom:14rem;
+                margin-bottom:0;
+            }
+
+    &__cont {
+
+       
+
+            
+         margin: 0 auto;
+         text-align:center;
+         padding:40px 35px 0 35px;
+
+        @include breakpoint-up(medium) {
+        width:500px;
+        }
+    }
+
+
+    &__img {
+        width: 300px;
+        margin-bottom:30px;
+
+        @include breakpoint-up(medium) {
+        width:550px;
+        }
+    }
+
+    &__head {
+        text-align:center;
+        font-size:23px;
+        margin-bottom:15px;
+        line-height:1.6;
+        font-weight:700;
+        font-family: 'Raleway', sans-serif; 
+        letter-spacing:0.5px;
+
+        @include breakpoint-up(medium) {
+        font-size:30px;
+        }
+        
+    }
+
+    &__desc {
+        padding: 0 5px 0 5px;
+        text-align:center;
+        line-height:1.5;
+        font-weight:400;
+        margin-bottom:30px;
+
+        @include breakpoint-up(medium) {
+        }
+    }
+
+    &__button {
+        margin: 0 auto;
+        width:240px;
+    }
+
+}

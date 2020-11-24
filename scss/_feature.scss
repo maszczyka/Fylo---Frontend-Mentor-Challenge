@@ -1,0 +1,58 @@
+.feature {
+
+    &__grid {
+        margin-left:auto;
+        margin-right:auto;
+        text-align:center;
+        padding:0 30px;
+
+        @include breakpoint-up(large) {
+            display:grid;
+            grid-template-columns:repeat(2, 1fr);
+            margin: 0 auto;
+            grid-column-gap:9.375rem;
+            grid-row-gap:10px;
+            width:900px;
+        }
+
+        @include media-breakpoint-between(small, medium) {
+            margin: 0 10rem;
+        }
+    }
+
+    &__item {
+        margin-bottom:5.3rem;
+
+        @include breakpoint-up(medium) {
+            
+        }   
+    }
+
+    &__icon {
+        margin-bottom:2.2rem;
+
+        img {
+        height:55px;
+
+        @include breakpoint-up(large) {
+           height:65px;
+        }
+        }
+    }
+
+    &__title {
+        font-weight:700;
+        margin-bottom:0.8125rem;
+        font-size:17px;
+        letter-spacing:1px;
+        font-family: 'Raleway', sans-serif;  
+
+    }
+
+    &__description {
+        line-height:1.5;
+        font-weight:400;
+    font-size:14px;    }
+
+}
+
